@@ -8,28 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-//Modules
 var core_1 = require('@angular/core');
-var shared_module_1 = require('../shared/shared.module');
-var bug_routing_module_1 = require('./bug-routing.module');
-//Component
-var bug_list_component_1 = require('./bug-list/bug-list.component');
-var bug_detail_component_1 = require('./bug-detail/bug-detail.component');
-//Service
-var bug_service_1 = require('./service/bug.service');
-var BugModule = (function () {
-    function BugModule() {
+var constants_1 = require('../constant/constants');
+var SeverityPipe = (function () {
+    function SeverityPipe() {
+        this.severities = constants_1.SEVERITY;
     }
-    BugModule = __decorate([
-        core_1.NgModule({
-            imports: [shared_module_1.SharedModule, bug_routing_module_1.BugRoutingModule],
-            declarations: [bug_list_component_1.BugListComponent, bug_detail_component_1.BugDetailComponent],
-            exports: [],
-            providers: [bug_service_1.BugService]
+    SeverityPipe.prototype.transform = function (severityNum) {
+        return this.severities[severityNum];
+    };
+    SeverityPipe = __decorate([
+        core_1.Pipe({
+            name: 'severity'
         }), 
         __metadata('design:paramtypes', [])
-    ], BugModule);
-    return BugModule;
+    ], SeverityPipe);
+    return SeverityPipe;
 }());
-exports.BugModule = BugModule;
-//# sourceMappingURL=bug.module.js.map
+exports.SeverityPipe = SeverityPipe;
+//# sourceMappingURL=severity.pipe.js.map
