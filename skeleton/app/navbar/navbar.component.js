@@ -9,10 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var NavBarComponent = (function () {
-    function NavBarComponent() {
+var NavbarComponent = (function () {
+    function NavbarComponent() {
     }
-    NavBarComponent = __decorate([
+    NavbarComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'navbar',
@@ -20,8 +20,8 @@ var NavBarComponent = (function () {
             styleUrls: ['navbar.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], NavBarComponent);
-    return NavBarComponent;
+    ], NavbarComponent);
+    return NavbarComponent;
 }());
-exports.NavBarComponent = NavBarComponent;
+exports.NavbarComponent = NavbarComponent;
 //# sourceMappingURL=navbar.component.js.map

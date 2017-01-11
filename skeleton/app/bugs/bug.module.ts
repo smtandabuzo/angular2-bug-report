@@ -6,16 +6,25 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 //Component
 import { BugListComponent } from './bug-list/bug-list.component';
-import { BugDetailComponent } from './bug-detail/bug-detail.component'
+import { BugDetailComponent } from './bug-detail/bug-detail.component';
 
 //Service
 import { BugService } from './service/bug.service';
 
 @NgModule({
-    imports: [ SharedModule, BugRoutingModule ],
-    declarations: [ BugListComponent,BugDetailComponent ],
-    exports: [],
-    providers: [ BugService ]
+    imports: [
+        SharedModule,
+        BugRoutingModule,
+        ReactiveFormsModule
+    ],
+    declarations: [
+        BugListComponent,
+        BugDetailComponent
+    ],
+    exports: [ ],
+    providers: [
+        BugService
+    ]
 })
 export class BugModule{
 

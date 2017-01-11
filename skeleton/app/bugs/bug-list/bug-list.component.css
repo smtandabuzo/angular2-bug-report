@@ -6,7 +6,8 @@ thead th{
     border-top: none;
     border-bottom: 1px solid #34434B;
 }
-th td{
+th,
+td {
     font-weight: lighter;
 }
 td{

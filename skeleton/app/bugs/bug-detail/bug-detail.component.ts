@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 //Services
-import { BugService } from '../service/bug.service'
+import { BugService } from '../service/bug.service';
 
 import { Bug } from '../model/bug';
 import { STATUS,SEVERITY } from '../../shared/constant/constants';
@@ -48,8 +48,10 @@ export class BugDetailComponent implements OnInit{
                 bug.status,
                 bug.severity,
                 bug.description,
-                null,
-                null
+                bug.createdBy,
+                bug.createdDate,
+                bug.updatedBy,
+                bug.updatedDate
             );
         }
         this.bugForm = this.formB.group({

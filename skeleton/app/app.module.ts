@@ -7,11 +7,11 @@ import { CoreModule } from './core/core.module';
 
 //Component
 import{ AppComponent } from './app.component';
-import { NavBarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
     imports: [ BrowserModule, BugModule, AppRoutingModule, CoreModule.forRoot() ],
-    declarations: [ AppComponent,NavBarComponent ],
+    declarations: [ AppComponent,NavbarComponent ],
     bootstrap: [ AppComponent ]
 })
 
